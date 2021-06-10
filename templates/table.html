@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br />
+    <h1 style="text-align: center;">{% block title %} TinyURL Table 📋{% endblock %}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Short URL</th>
+            <th scope="col">Original URL</th>
+            <th scope="col">Total Clicks</th>
+            <th scope="col">Creation Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for url in urls %}
+                <tr>
+                    <th scope="row">{{ url['id'] }}</th>
+                    <td>{{ url['short_url'] }}</td>
+                    <td>{{ url['original_url'] }}</td>
+                    <td>{{ url['clicks'] }}</td>
+                    <td>{{ url['created'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

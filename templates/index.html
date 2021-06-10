@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <br />
+    <h1 style="text-align: center;">{% block title %} BlueCouch AI 😎 {% endblock %}</h1>
+    <form method="post">
+        <br />
+        <div class="form-group">
+            <label for="url">Please input the URL below:</label>
+            <input type="text" name="url"
+                placeholder="URL to shorten" class="form-control"
+                value="{{ request.form['url'] }}" autofocus></input>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-block btn-lg btn-outline-dark">Submit</button>
+        </div>
+    </form>
+
+    {% if short_url %}
+    <hr>
+    <span>{{ short_url }}</span>
+    {% endif %}
+{% endblock %}
