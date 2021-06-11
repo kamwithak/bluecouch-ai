@@ -2,7 +2,7 @@ import requests
 import urllib
 
 """
-URL shortener class using TinyURL API
+URL shortener class using TinyURL API.
 """
 class UrlShortenTinyurl:
 
