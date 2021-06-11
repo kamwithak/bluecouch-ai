@@ -1,0 +1,1 @@
+This is a sample Flask/Sqlite3 Full-Stack app created for BlueCouch AI.
